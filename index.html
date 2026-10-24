@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="gu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AaspaasKhoj (આસપાસ ખોજ) - Discover • Learn • Grow | Digital Marketing & AI Automation Gandhinagar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            font-family: 'Noto Sans Gujarati', 'Poppins', sans-serif;
+            overflow-x: hidden !important;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #070b19;
+            color: #f8fafc;
+        }
+        /* Strict Logo Lock for Mobile & PC */
+        .nav-logo-lock {
+            width: 48px !important;
+            height: 48px !important;
+            min-width: 48px !important;
+            min-height: 48px !important;
+            object-fit: cover;
+            border-radius: 9999px;
+        }
+        @media (min-width: 640px) {
+            .nav-logo-lock {
+                width: 58px !important;
+                height: 58px !important;
+                min-width: 58px !important;
+                min-height: 58px !important;
+            }
+        }
+        .hero-logo-lock {
+            width: 115px !important;
+            height: 115px !important;
+            object-fit: cover;
+            border-radius: 9999px;
+        }
+        @media (min-width: 640px) {
+            .hero-logo-lock {
+                width: 145px !important;
+                height: 145px !important;
+            }
+        }
+        /* Rainbow Border Glow matching AaspaasKhoj Logo */
+        .rainbow-ring {
+            background: linear-gradient(135deg, #f97316, #eab308, #22c55e, #06b6d4, #ec4899, #8b5cf6);
+            padding: 3px;
+            border-radius: 9999px;
+        }
+        /* Hero Background */
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.22), transparent 45%),
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.22), transparent 45%),
+                        linear-gradient(180deg, #070b19 0%, #0f172a 100%);
+        }
+        /* Marquee Animation */
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 32s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-content {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        /* Business Category Hover Card */
+        .biz-card {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .biz-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 30px -10px rgba(249, 115, 22, 0.35);
+            border-color: #f97316;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- 1. TOP LIVE MARQUEE OFFER STRIP -->
+    <div class="bg-gradient-to-r from-orange-600 via-amber-500 to-pink-600 text-slate-950 py-2 shadow-lg marquee-wrapper cursor-pointer font-extrabold text-xs sm:text-sm">
+        <div class="marquee-content">
+            <span class="mx-5">🔥 🎁 પ્રથમ 50 બિઝનેસ માટે FREE Video Shoutout!</span>
+            <span class="mx-5">🎬 તમારા ધંધાની પ્રમોશનલ Reel માત્ર ₹499 થી શરૂ!</span>
+            <span class="mx-5">🤖 AI Automation & Email/WhatsApp માર્કેટિંગથી ધંધો ઓટોપાયલટ પર ચલાવો!</span>
+            <span class="mx-5">📍 ગાંધીનગર (સરગાસણ, કુડાસણ, સેક્ટર 1-30) અને અમદાવાદના વેપારીઓ માટે ખાસ ઓફર!</span>
+            <span class="mx-5">🏛️ સરકારી સબસિડી, નવો બિઝનેસ આઈડિયા અને લોન માર્ગદર્શન માટે આજે જ જોડાવો: 📞 7874636362</span>
+            <!-- Duplicate -->
+            <span class="mx-5">🔥 🎁 પ્રથમ 50 બિઝનેસ માટે FREE Video Shoutout!</span>
+            <span class="mx-5">🎬 તમારા ધંધાની પ્રમોશનલ Reel માત્ર ₹499 થી શરૂ!</span>
+        </div>
+    </div>
+
+    <!-- 2. STICKY NAVIGATION HEADER -->
+    <header class="bg-slate-950/90 backdrop-blur-md shadow-2xl sticky top-0 z-50 border-b border-slate-800 w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex justify-between items-center gap-2">
+            
+            <!-- Brand Logo & Title -->
+            <a href="#home" class="flex items-center gap-3 min-w-0 flex-1">
+                <div class="rainbow-ring flex-shrink-0 shadow-lg">
+                    <img src="aaspaaskhojlogo.jpg" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=AK&background=0f172a&color=f97316&size=128&bold=true';" 
+                         alt="AaspaasKhoj Logo" 
+                         class="nav-logo-lock bg-slate-950">
+                </div>
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-white truncate">
+                            Aaspaas<span class="text-orange-500">Khoj</span>
+                        </span>
+                        <span class="hidden md:inline-block bg-orange-500/20 text-orange-400 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-orange-500/40">
+                            📍 ગાંધીનગર & ગુજરાત
+                        </span>
+                    </div>
+                    <span class="text-[11px] sm:text-xs text-amber-400 font-bold block truncate">
+                        🔎 Discover • 🎓 Learn • 🚀 Grow | આસપાસ ખોજ
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex space-x-6 font-bold text-slate-300 items-center text-sm flex-shrink-0">
+                <a href="#home" class="hover:text-orange-400 transition">હોમ</a>
+                <a href="#services" class="hover:text-orange-400 transition">અમારી સર્વિસ</a>
+                <a href="#categories" class="hover:text-orange-400 transition">તમારો ધંધો (Hover)</a>
+                <a href="#portfolio" class="hover:text-orange-400 transition">અમારું કામ</a>
+                <a href="#subsidy" class="hover:text-orange-400 transition">સરકારી સબસિડી & આઈડિયા</a>
+                <a href="https://wa.me/917874636362?text=નમસ્તે%20AaspaasKhoj!%20મારે%20મારા%20બિઝનેસની%20Reel%20અને%20માર્કેટિંગ%20વિશે%20માહિતી%20જોઈએ%20છે." target="_blank" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 px-5 py-2.5 rounded-full font-black transition shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> 7874636362
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Menu" class="xl:hidden bg-slate-900 text-orange-400 w-10 h-10 rounded-xl flex items-center justify-center border border-slate-700 focus:outline-none flex-shrink-0">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-t border-slate-800 px-4 py-4 space-y-3 shadow-2xl font-bold text-sm">
+            <a href="#home" class="mobile-link block text-slate-200 hover:text-orange-400 py-2 border-b border-slate-800">🏠 હોમ પેજ</a>
+            <a href="#services" class="mobile-link block text-slate-200 hover:text-orange-400 py-2 border-b border-slate-800">🎬 Reels શૂટિંગ & AI ઓટોમેશન</a>
+            <a href="#categories" class="mobile-link block text-slate-200 hover:text-orange-400 py-2 border-b border-slate-800">🏪 આસપાસના ધંધા (Hover Categories)</a>
+            <a href="#portfolio" class="mobile-link block text-slate-200 hover:text-orange-400 py-2 border-b border-slate-800">💻 અમે બનાવેલી વેબસાઇટ્સ & પરિણામ</a>
+            <a href="#subsidy" class="mobile-link block text-amber-400 py-2 border-b border-slate-800">🏛️ સરકારી સબસિડી & નવા બિઝનેસ આઈડિયા</a>
+            <a href="#contact" class="mobile-link block bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 text-center py-3 rounded-xl font-black shadow-md">📲 Reel બુક કરો (7874636362)</a>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="hero-bg py-12 sm:py-20 px-4 text-center relative overflow-hidden border-b border-slate-800">
+        <div class="max-w-5xl mx-auto relative z-10">
+            
+            <!-- Center Logo with Rainbow Ring -->
+            <div class="flex justify-center mb-6">
+                <div class="rainbow-ring shadow-2xl inline-block">
+                    <img src="aaspaaskhojlogo.jpg" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Aaspaas+Khoj&background=0f172a&color=f97316&size=200&bold=true';" 
+                         alt="AaspaasKhoj Official Logo" 
+                         class="hero-logo-lock bg-slate-950 border-4 border-slate-950">
+                </div>
+            </div>
+
+            <!-- Special Offer Pill -->
+            <div class="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/40 text-amber-300 text-xs sm:text-base font-extrabold px-4 py-2 rounded-full mb-6 shadow-lg">
+                <span>🎁 First 50 Businesses FREE Video Shoutout | પેકેજ માત્ર ₹499 થી શરૂ!</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight text-white">
+                તમારા આસપાસના ધંધાને બનાવો<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-pink-500">
+                    ગાંધીનગર અને ગુજરાતની નંબર-૧ બ્રાન્ડ!
+                </span>
+            </h1>
+
+            <p class="text-sm sm:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                શું તમારી દુકાન, ઓફિસ કે બિઝનેસમાં ગ્રાહકો વધારવા છે? <strong>AaspaasKhoj (આસપાસ ખોજ)</strong> એકદમ નોમિનલ ચાર્જમાં તમારી દુકાને આવીને <strong>HD Reels ઉતારી આપશે</strong>, અમારા Instagram અને Facebook પેજ પર ડેઈલી પોસ્ટ કરશે અને <strong>AI Automation</strong> થી તમારા ધંધાને 10X આગળ લઈ જશે!
+            </p>
+
+            <!-- Service Highlight Pills -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-9 max-w-3xl mx-auto">
+                <span class="bg-slate-900 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-orange-300">🎬 વાયરલ Reels શૂટિંગ</span>
+                <span class="bg-slate-900 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-cyan-300">🤖 AI Email & WhatsApp ઓટોમેશન</span>
+                <span class="bg-slate-900 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-emerald-300">💻 પ્રોફેશનલ વેબસાઇટ ડેવલપમેન્ટ</span>
+                <span class="bg-slate-900 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-300">🏛️ સરકારી સબસિડી & નવા બિઝનેસ આઈડિયા</span>
+                <span class="bg-slate-900 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-pink-300">📢 સ્પેશિયલ ઓફર પ્રમોશન</span>
+            </div>
+
+            <!-- Primary CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-lg sm:max-w-none mx-auto">
+                <a href="https://wa.me/917874636362?text=નમસ્તે%20AaspaasKhoj!%20મારે%20મારા%20ધંધાની%20Reel%20ઉતારવી%20છે%20અને%20પ્રમોશન%20કરવું%20છે." target="_blank" class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-black py-4 px-8 rounded-full shadow-2xl transition text-base sm:text-lg flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp પર Reel બુક કરો
+                </a>
+                <a href="https://instagram.com/aaspaaskhoj" target="_blank" class="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:opacity-95 text-white font-black py-4 px-8 rounded-full shadow-2xl transition text-base sm:text-lg flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-instagram text-2xl"></i> @aaspaaskhoj ફોલો કરો
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MARKETING IMPACT STATS BAR -->
+    <section class="bg-slate-900 py-8 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+                <div class="p-4 bg-slate-950/80 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-black text-orange-400 mb-1">50+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-bold">બિઝનેસ સેટઅપ & પ્રમોશન</div>
+                </div>
+                <div class="p-4 bg-slate-950/80 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-black text-cyan-400 mb-1">4.4K+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-bold">પ્રારંભિક Reel Views & Reach</div>
+                </div>
+                <div class="p-4 bg-slate-950/80 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-black text-emerald-400 mb-1">₹499</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-bold">નોમિનલ પ્રમોશન ચાર્જ</div>
+                </div>
+                <div class="p-4 bg-slate-950/80 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-4xl font-black text-amber-400 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-bold">ફૂલ બિઝનેસ સપોર્ટ ગેરેન્ટી</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CORE SERVICES (Reels, AI Automation, Website, Ideas & Subsidy) -->
+    <section id="services" class="py-16 sm:py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="bg-orange-500/20 text-orange-400 font-extrabold uppercase tracking-wider text-xs sm:text-sm px-4 py-1.5 rounded-full border border-orange-500/30">
+                🚀 અમારી 360° બિઝનેસ ગ્રોથ સર્વિસ
+            </span>
+            <h2 class="text-2xl sm:text-5xl font-black text-white mt-4 mb-4">
+                તમારા ધંધાને આગળ વધારવા અમે શું-શું કરી આપીશું?
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-lg">
+                નાના દુકાનદારથી લઈને મોટા શોરૂમ સુધી — દરેક વેપારીને ડિજિટલ અને AI ટેકનોલોજીથી સજ્જ કરવાનું અમારું લક્ષ્ય છે:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            
+            <!-- Service 1: Reels & Offer Shoot -->
+            <div class="bg-slate-900 rounded-3xl p-7 border border-slate-800 biz-card flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-pink-600 rounded-2xl flex items-center justify-center text-2xl text-white mb-5 shadow-lg">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <span class="bg-orange-500/20 text-orange-300 text-xs font-bold px-3 py-1 rounded-full">સૌથી વધુ ડિમાન્ડ 🔥</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-3 mb-3">૧. બિઝનેસ Reels શૂટિંગ & ડેઈલી પોસ્ટ</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        તમારી દુકાન, શોરૂમ કે કોઈ ખાસ **તહેવાર/ડિસ્કાઉન્ટ ઓફર** માટે અમે રૂબરૂ આવીને આકર્ષક વિડિયો Reel ઉતારી આપીશું, એડિટ કરીશું અને અમારા **AaspaasKhoj Instagram & Facebook** પેજ પર મૂકીને ગાંધીનગર-અમદાવાદના હજારો લોકો સુધી પહોંચાડીશું!
+                    </p>
+                </div>
+                <a href="https://wa.me/917874636362?text=નમસ્તે!%20મારે%20મારા%20ધંધાની%20પ્રમોશનલ%20Reel%20ઉતારવી%20છે." target="_blank" class="text-orange-400 font-extrabold text-sm flex items-center gap-2 hover:text-orange-300">
+                    નોમિનલ ચાર્જમાં Reel બુક કરો <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Service 2: AI Business & Email Automation -->
+            <div class="bg-slate-900 rounded-3xl p-7 border border-slate-800 biz-card flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl text-white mb-5 shadow-lg">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">AI ટેકનોલોજી 🤖</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-3 mb-3">૨. AI ઓટોમેશન & ઈમેલ/WhatsApp માર્કેટિંગ</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        તમારા ધંધાને સ્માર્ટ બનાવો! **AI ની મદદથી ઓટોમેટિક ઈમેલ સેન્ડિંગ**, WhatsApp ઓટો-રિપ્લાય, લીડ જનરેશન અને કસ્ટમર ફોલો-અપ સિસ્ટમ અમે સેટ કરી આપીશું, જેથી તમે સૂતા હોવ તો પણ તમારો ધંધો ૨૪ કલાક ચાલતો રહે!
+                    </p>
+                </div>
+                <a href="https://wa.me/917874636362?text=નમસ્તે!%20મારે%20મારા%20બિઝનેસમાં%20AI%20Automation%20અને%20Email%20Marketing%20સેટઅપ%20કરવું%20છે." target="_blank" class="text-cyan-400 font-extrabold text-sm flex items-center gap-2 hover:text-cyan-300">
+                    AI ઓટોમેશન ડેમો જુઓ <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Service 3: Website & Digital Setup -->
+            <div class="bg-slate-900 rounded-3xl p-7 border border-slate-800 biz-card flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-2xl text-white mb-5 shadow-lg">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">ડિજિટલ ઓળખ 💻</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-3 mb-3">૩. બિઝનેસ વેબસાઇટ & Google Map સેટઅપ</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        અમે અત્યાર સુધીમાં અનેક સંસ્થાઓ અને ધંધાઓની હાઈ-સ્પીડ મોબાઇલ રિસ્પોન્સિવ વેબસાઇટ બનાવી આપી છે. તમારા બિઝનેસની ઓનલાઇન વેબસાઇટ, QR કેટલોગ અને Google Business Profile સેટઅપ કરી આપીશું.
+                    </p>
+                </div>
+                <a href="https://wa.me/917874636362?text=નમસ્તે!%20મારે%20મારા%20બિઝનેસ%20માટે%20નવી%20વેબસાઇટ%20બનાવવી%20છે." target="_blank" class="text-emerald-400 font-extrabold text-sm flex items-center gap-2 hover:text-emerald-300">
+                    તમારી વેબસાઇટ બનાવડાવો <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. HOVER BUSINESS CATEGORIES (Touch/Hover to see how we grow each business) -->
+    <section id="categories" class="py-16 bg-slate-900/80 px-4 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-amber-500/20 text-amber-300 font-extrabold uppercase text-xs sm:text-sm px-4 py-1.5 rounded-full border border-amber-500/30">
+                    🏪 આસપાસના દરેક ધંધા માટે ખાસ પ્લાન (Hover / Touch Cards)
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-3 mb-3">
+                    તમારો ધંધો કયો છે? કાર્ડ પર ટચ (Hover) કરો!
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    ગાંધીનગર, અમદાવાદ અને ગુજરાતના કોઈપણ સિટીના વેપારીઓ માટે કેટેગરી મુજબ માર્કેટિંગ:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <!-- Cat 1 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🍔☕</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-orange-400 transition">કાફે, રેસ્ટોરન્ટ & ફૂડ</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        તમારી સ્પેશિયલ ડિશ, નવી ઓફર અને હાઈજીનનો Food Reel બનાવી ગાંધીનગરના ફૂડ લવર્સ સુધી પહોંચાડીશું.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-orange-400 opacity-80 group-hover:opacity-100">
+                        ✓ Food Reel + Offer Post
+                    </div>
+                </div>
+
+                <!-- Cat 2 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🎓📚</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-cyan-400 transition">એજ્યુકેશન, ક્લાસીસ & IELTS</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        ટ્યુશન ક્લાસીસ, કોમ્પ્યુટર/IT ઇન્સ્ટિટ્યૂટ અને વિઝા કન્સલ્ટન્સીમાં નવા સ્ટુડન્ટ્સ મેળવવા AI લીડ ઓટોમેશન અને Reels.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-cyan-400 opacity-80 group-hover:opacity-100">
+                        ✓ Student Lead Generation
+                    </div>
+                </div>
+
+                <!-- Cat 3 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">👗🛍️</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-pink-400 transition">શોરૂમ, બુટિક & શોપિંગ</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        કપડાં, જ્વેલરી, ફૂટવેર કે ગિફ્ટ શોપના નવા કલેક્શન અને સેલની Reels ઉતારી ગ્રાહકોની લાઈન લગાવી દઈશું.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-pink-400 opacity-80 group-hover:opacity-100">
+                        ✓ Festival Sale Reels
+                    </div>
+                </div>
+
+                <!-- Cat 4 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🏢🏠</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-amber-400 transition">રિયલ એસ્ટેટ & પ્રોપર્ટી</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        ફ્લેટ, દુકાન કે પ્લોટના વોક-થ્રુ વિડિયો Reels અને બાયર્સ માટે ઓટોમેટિક WhatsApp બ્રોશર સિસ્ટમ.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-amber-400 opacity-80 group-hover:opacity-100">
+                        ✓ Property Tour Video
+                    </div>
+                </div>
+
+                <!-- Cat 5 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">💇‍♂️🏋️</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-purple-400 transition">સલૂન, બ્યુટી પાર્લર & જિમ</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        મેકઓવર વિડિયો, જિમ ટ્રાન્સફોર્મેશન Reels અને કોમ્બો ઓફર્સનું લોકલ એરિયામાં જબરદસ્ત પ્રમોશન.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-purple-400 opacity-80 group-hover:opacity-100">
+                        ✓ Local Area Targeting
+                    </div>
+                </div>
+
+                <!-- Cat 6 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🏥💊</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-emerald-400 transition">ક્લિનિક, હોસ્પિટલ & લેબ</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        ડોક્ટરની અવેરનેસ Reels, હેલ્થ ચેકઅપ કેમ્પ પ્રમોશન અને ઓનલાઇન એપોઇન્ટમેન્ટ વેબસાઇટ સેટઅપ.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-emerald-400 opacity-80 group-hover:opacity-100">
+                        ✓ Trust & Awareness Reels
+                    </div>
+                </div>
+
+                <!-- Cat 7 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🛠️🚗</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-sky-400 transition">ગોરેજ, સર્વિસ & હોમ રિપેર</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        કાર/બાઈક સર્વિસ, પેઇન્ટિંગ, ફર્નિચર કે ઇલેક્ટ્રિક સર્વિસને આસપાસના દરેક સોસાયટી સુધી પહોંચાડો.
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-sky-400 opacity-80 group-hover:opacity-100">
+                        ✓ Direct Call Leads
+                    </div>
+                </div>
+
+                <!-- Cat 8 -->
+                <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 biz-card cursor-pointer group">
+                    <div class="text-4xl mb-3">🚀💡</div>
+                    <h3 class="text-lg font-black text-white group-hover:text-yellow-400 transition">નવો સ્ટાર્ટઅપ / ગૃહ ઉદ્યોગ</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        ઘરેથી ચાલતા બિઝનેસ કે નવા સ્ટાર્ટઅપને પહેલા જ દિવસથી લોકોમાં ફેમસ કરવા માટે સંપૂર્ણ સપોર્ટ!
+                    </p>
+                    <div class="mt-4 text-xs font-extrabold text-yellow-400 opacity-80 group-hover:opacity-100">
+                        ✓ Zero to Brand Setup
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OUR PROVEN PORTFOLIO & WEBSITES WE BUILT -->
+    <section id="portfolio" class="py-16 sm:py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-emerald-500/20 text-emerald-400 font-extrabold uppercase text-xs sm:text-sm px-4 py-1.5 rounded-full border border-emerald-500/30">
+                🏆 અમારું કામ અને સફળતા (Our Proven Track Record)
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-3 mb-3">
+                અમે અનેક ધંધા અને પ્લેટફોર્મનું સફળ સેટઅપ કરી ચૂક્યા છીએ!
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                વેબસાઇટ ડેવલપમેન્ટથી લઈને સોશિયલ મીડિયા ગ્રોથ સુધી — અમે જેમને આગળ વધાર્યા છે તેમની ઝલક:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <!-- Project 1 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-7 rounded-3xl border border-slate-800 biz-card">
+                <span class="bg-orange-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full">Live Platform & 14.7K+ IG</span>
+                <h3 class="text-xl font-black text-white mt-4 mb-2">૧. જીવસેવક પરિવાર (JivSevak Family)</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                    સંપૂર્ણ રિસ્પોન્સિવ વેબસાઇટ, ડાયનેમિક QR સિસ્ટમ અને સોશિયલ મીડિયા પર 14,700+ ફોલોઅર્સ તથા લાખોમાં રીલ્સ વ્યુઝનું સફળ સંચાલન.
+                </p>
+                <div class="text-xs font-bold text-emerald-400">✓ Website + Viral Reels Growth</div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-7 rounded-3xl border border-slate-800 biz-card">
+                <span class="bg-cyan-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full">IT & AI Automation</span>
+                <h3 class="text-xl font-black text-white mt-4 mb-2">૨. Ramdoot Infotech & AI Solutions</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                    કસ્ટમ સોફ્ટવેર, મોબાઇલ એપ્લિકેશન, બિઝનેસ ઓટોમેશન અને એન્ટરપ્રાઇઝ વેબ પ્લેટફોર્મ દ્વારા વેપારીઓને ટેકનોલોજી સપોર્ટ.
+                </p>
+                <div class="text-xs font-bold text-cyan-400">✓ Software + AI Email Automation</div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-7 rounded-3xl border border-slate-800 biz-card">
+                <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full">Gandhinagar Local Hit</span>
+                <h3 class="text-xl font-black text-white mt-4 mb-2">૩. સરગાસણ & ગાંધીનગર લોકલ બિઝનેસ</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                    ગાંધીનગરના સરગાસણ અને આસપાસના વિસ્તારોમાં નવા ખુલેલા ફૂડ જોઈન્ટ્સ, શોરૂમ અને સર્વિસ બિઝનેસની Reels બનાવીને 3,800+ ઓર્ગેનિક વ્યુઝ અપાવ્યા!
+                </p>
+                <div class="text-xs font-bold text-amber-400">✓ Local Discovery & Footfall</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. GOVERNMENT SUBSIDY, SCHEMES & NEW BUSINESS IDEAS SECTION -->
+    <section id="subsidy" class="py-16 px-4 bg-gradient-to-r from-indigo-950 via-slate-900 to-amber-950/60 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <span class="bg-amber-400 text-slate-950 text-xs sm:text-sm font-black px-4 py-1.5 rounded-full uppercase">
+                        🏛️ નવો ધંધો • સરકારી યોજના • સબસિડી સહાય
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-black text-white mt-4 mb-4 leading-tight">
+                        નવો બિઝનેસ શરૂ કરવો છે કે સરકારી સબસિડી અને સહાયનો લાભ લેવો છે?
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                        ઘણા યુવાનો અને વેપારીઓને નવો ધંધો કરવો હોય છે પણ <strong>કયો ધંધો કરવો (Business Idea)</strong> અને <strong>સરકાર તરફથી મળતી સબસિડી કે લોન સહાય</strong> કેવી રીતે લેવી તેની સાચી માહિતી હોતી નથી. <strong>AaspaasKhoj</strong> તમને આમાં સંપૂર્ણ માર્ગદર્શન આપે છે!
+                    </p>
+                    <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-200">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400 text-lg mt-0.5"></i>
+                            <span><strong>સરકારી યોજના અને સબસિડી:</strong> MSME, મુદ્રા લોન, વાજપેયી બેંકેબલ યોજના અને સ્ટાર્ટઅપ ગુજરાત હેઠળ મળતી સબસિડી અને સહાયની માહિતી.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400 text-lg mt-0.5"></i>
+                            <span><strong>નવા બિઝનેસ આઈડિયા & ઓપોર્ચ્યુનિટી:</strong> ઓછા રોકાણમાં ગાંધીનગર કે તમારા શહેરમાં કયો નવો ધંધો સૌથી વધુ ચાલશે તેનું સચોટ પ્લાનિંગ.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400 text-lg mt-0.5"></i>
+                            <span><strong>પહેલા દિવસથી માર્કેટિંગ સપોર્ટ:</strong> ધંધો શરૂ કરતાની સાથે જ તેની Reel અને AI માર્કેટિંગ કરીને ગ્રાહકો લાવી આપવાની જવાબદારી અમારી!</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/917874636362?text=નમસ્તે%20AaspaasKhoj!%20મારે%20નવા%20બિઝનેસ%20આઈડિયા%20અને%20સરકારી%20સબસિડી/સહાય%20વિશે%20માહિતી%20જોઈએ%20છે." target="_blank" class="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-7 py-4 rounded-xl shadow-xl transition text-sm sm:text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> સબસિડી & બિઝનેસ માટે WhatsApp કરો
+                    </a>
+                </div>
+
+                <!-- Gandhinagar Focus Card -->
+                <div class="bg-slate-950/90 p-7 sm:p-9 rounded-3xl border-2 border-orange-500/50 shadow-2xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-orange-500 text-slate-950 rounded-2xl flex items-center justify-center text-2xl font-black">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white">ગાંધીનગર સ્પેશિયલ ફોકસ 📍</h3>
+                            <span class="text-xs text-orange-400 font-bold">અમદાવાદ અને સમગ્ર ગુજરાતમાં પણ સર્વિસ ઉપલબ્ધ</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+                        અમારું મુખ્ય ફોકસ **ગાંધીનગર**ના દરેક વિસ્તારના નાના-મોટા વેપારીઓને ડિજિટલ પ્લેટફોર્મ પર લાવવાનું છે. જો તમારો બિઝનેસ નીચેના વિસ્તારમાં હોય તો આજે જ અમને બોલાવો:
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 સરગાસણ</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 કુડાસણ</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 રાયસણ & PDPU રોડ</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 સેક્ટર 1 થી 30</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 ઇન્ફોસિટી & ગિફ્ટ સિટી</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 અડાલજ & કલોલ</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded-lg text-xs font-bold text-amber-300">📍 અમદાવાદ & ગુજરાત</span>
+                    </div>
+                    <div class="bg-orange-500/10 border border-orange-500/30 p-4 rounded-2xl text-xs sm:text-sm text-orange-200 font-bold">
+                        📞 ડાયરેક્ટ કોલ અથવા WhatsApp DM કરો: <a href="tel:7874636362" class="underline text-white">7874636362</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DIRECT WHATSAPP BOOKING FORM & SOCIAL LINKS -->
+    <section id="contact" class="py-16 sm:py-24 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            
+            <!-- Left: Social Media Community -->
+            <div>
+                <span class="bg-pink-500/20 text-pink-400 font-extrabold uppercase text-xs sm:text-sm px-4 py-1.5 rounded-full border border-pink-500/30">
+                    📱 સોશિયલ મીડિયા અને WhatsApp ગ્રુપ
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-4 mb-4">
+                    અમારા Instagram, Facebook અને WhatsApp ગ્રુપમાં જોડાઈ જાવ!
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
+                    અમે રોજ નવા બિઝનેસની Reels, માર્કેટિંગ ટિપ્સ, AI ટૂલ્સ અને ગાંધીનગરની બેસ્ટ ઓફર્સના વિડિયો અમારા પેજ પર મૂકીએ છીએ. એકવાર જોડાવો, અમે તમને ફૂલ સપોર્ટ કરીશું!
+                </p>
+
+                <div class="space-y-4">
+                    <!-- Instagram Card -->
+                    <a href="https://instagram.com/aaspaaskhoj" target="_blank" class="flex items-center justify-between bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 p-5 rounded-2xl shadow-xl hover:opacity-95 transition">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-brands fa-instagram text-4xl text-white"></i>
+                            <div>
+                                <h4 class="font-black text-lg text-white">@aaspaaskhoj (Instagram)</h4>
+                                <p class="text-xs text-amber-100">ડેઈલી બિઝનેસ Reels અને FREE Shoutout માટે ફોલો કરો</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+                    </a>
+
+                    <!-- Facebook Card -->
+                    <a href="https://facebook.com/aaspaaskhoj" target="_blank" class="flex items-center justify-between bg-blue-600 hover:bg-blue-700 p-5 rounded-2xl shadow-xl transition">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-brands fa-facebook text-4xl text-white"></i>
+                            <div>
+                                <h4 class="font-black text-lg text-white">AaspaasKhoj Facebook Page</h4>
+                                <p class="text-xs text-blue-100">લોકલ બિઝનેસ વિડિયો અને પ્રમોશન માટે પેજ ફોલો કરો</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+                    </a>
+
+                    <!-- WhatsApp Direct & Group -->
+                    <a href="https://wa.me/917874636362?text=નમસ્તે%20AaspaasKhoj!%20મને%20તમારા%20બિઝનેસ%20WhatsApp%20Group%20માં%20એડ%20કરો." target="_blank" class="flex items-center justify-between bg-emerald-600 hover:bg-emerald-700 p-5 rounded-2xl shadow-xl transition">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-brands fa-whatsapp text-4xl text-white"></i>
+                            <div>
+                                <h4 class="font-black text-lg text-white">WhatsApp બિઝનેસ ગ્રુપ (7874636362)</h4>
+                                <p class="text-xs text-emerald-100">ગ્રુપમાં જોડાવા અને ડાયરેક્ટ DM કરવા અહીં ક્લિક કરો</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Instant WhatsApp Lead Form -->
+            <div class="bg-slate-900 p-6 sm:p-10 rounded-3xl border-2 border-orange-500/40 shadow-2xl">
+                <div class="text-center mb-6">
+                    <span class="bg-orange-500/20 text-orange-400 text-xs font-extrabold px-3.5 py-1 rounded-full uppercase">
+                        ⚡ Instant Booking Form
+                    </span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-2">
+                        તમારી બિઝનેસ Reel કે સર્વિસ બુક કરો
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">
+                        નીચે વિગત ભરી બટન દબાવશો એટલે સીધો જ <strong>7874636362</strong> પર WhatsApp મેસેજ ખુલશે!
+                    </p>
+                </div>
+
+                <form onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-1">તમારું નામ & બિઝનેસ/દુકાનનું નામ *</label>
+                        <input type="text" id="bname" required placeholder="દા.ત. રાજેશભાઈ - રોયલ કાફે સરગાસણ" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-orange-500 text-sm">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-1">તમારો મોબાઇલ નંબર *</label>
+                            <input type="tel" id="bphone" required placeholder="9876543210" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-orange-500 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-1">સિટી / વિસ્તાર *</label>
+                            <input type="text" id="bcity" required placeholder="દા.ત. ગાંધીનગર / અમદાવાદ" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-orange-500 text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-1">તમારે કઈ સર્વિસ જોઈએ છે? *</label>
+                        <select id="bservice" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-orange-500 text-sm">
+                            <option value="બિઝનેસ Reel શૂટિંગ & Instagram પ્રમોશન (Start ₹499)">🎬 બિઝનેસ Reel શૂટિંગ & IG પ્રમોશન (Start ₹499)</option>
+                            <option value="સ્પેશિયલ ઓફર / ફેસ્ટિવલ Reel અપલોડ">🔥 સ્પેશિયલ ઓફર / ડિસ્કાઉન્ટ Reel અપલોડ</option>
+                            <option value="AI ઓટોમેશન & Email/WhatsApp માર્કેટિંગ">🤖 AI ઓટોમેશન & Email/WhatsApp માર્કેટિંગ</option>
+                            <option value="નવી વેબસાઇટ બનાવવી છે">💻 બિઝનેસ માટે નવી વેબસાઇટ બનાવવી છે</option>
+                            <option value="નવો બિઝનેસ આઈડિયા & સરકારી સબસિડી માર્ગદર્શન">🏛️ નવો બિઝનેસ આઈડિયા & સરકારી સબસિડી</option>
+                            <option value="WhatsApp બિઝનેસ ગ્રુપમાં જોડાવું છે">👥 AaspaasKhoj WhatsApp ગ્રુપમાં જોડાવું છે</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 font-black py-4 rounded-xl shadow-xl transition text-base flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp પર મેસેજ મોકલો (7874636362)
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 px-4 text-center border-t border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center mb-3">
+                <div class="rainbow-ring">
+                    <img src="aaspaaskhojlogo.jpg" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=AK&background=0f172a&color=f97316';" 
+                         alt="AaspaasKhoj Logo" class="nav-logo-lock bg-slate-950">
+                </div>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-1">Aaspaas<span class="text-orange-500">Khoj</span> (આસપાસ ખોજ)</h3>
+            <p class="text-xs sm:text-sm text-amber-400 mb-5 font-bold">🔎 Discover • 🎓 Learn • 🚀 Grow | ગાંધીનગર અને ગુજરાતનું લોકલ બિઝનેસ ગ્રોથ પ્લેટફોર્મ</p>
+            
+            <div class="flex justify-center space-x-6 mb-6 text-2xl">
+                <a href="https://instagram.com/aaspaaskhoj" target="_blank" class="text-pink-500 hover:scale-110 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com/aaspaaskhoj" target="_blank" class="text-blue-500 hover:scale-110 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/917874636362" target="_blank" class="text-emerald-500 hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="text-[11px] text-slate-500 border-t border-slate-900 pt-5">
+                © 2026 AaspaasKhoj | Contact & WhatsApp: +91 7874636362 | All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917874636362?text=નમસ્તે%20AaspaasKhoj!%20મારે%20મારા%20બિઝનેસ%20માર્કેટિંગ%20વિશે%20વાત%20કરવી%20છે." target="_blank" class="fixed bottom-5 right-5 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl border-2 border-white transition transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu & Direct WhatsApp Integration -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('bname').value;
+            const phone = document.getElementById('bphone').value;
+            const city = document.getElementById('bcity').value;
+            const service = document.getElementById('bservice').value;
+
+            const text = `નમસ્તે AaspaasKhoj! 🚀%0A%0A*નામ/બિઝનેસ:* ${name}%0A*મોબાઇલ:* ${phone}%0A*સિટી/એરિયા:* ${city}%0A*સર્વિસ:* ${service}%0A%0Aમારે આ સર્વિસ વિશે વાત કરવી છે.`;
+            window.open(`https://wa.me/917874636362?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
